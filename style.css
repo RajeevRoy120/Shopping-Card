@@ -1,0 +1,235 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ff7f50, #ff6347); /* Gradient from coral to tomato */
+    color: #333;
+    margin-bottom: 100px; /* Space for footer */
+    text-align: center;
+}
+
+/* Container Styles */
+.container {
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.container:hover {
+    transform: translateY(-10px); /* Slightly lifts the container */
+}
+
+/* Header Styles */
+h1, h2, h3 {
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 20px;
+}
+
+/* Product & Cart Layout */
+.product-list, .cart {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Product Cards */
+.product {
+    border: 1px solid #ddd;
+    background: white;
+    padding: 15px;
+    margin: 10px;
+    text-align: center;
+    width: 220px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.product:hover {
+    transform: scale(1.05); /* Slightly enlarges the card */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Adds a deeper shadow */
+}
+
+/* Product Images */
+.product img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover Effect on Product Images */
+.product img:hover {
+    transform: scale(1.1); /* Enlarges the image */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); /* Adds a deeper shadow */
+}
+
+/* Button Styling */
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #333;
+    color: white;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar h2 {
+    margin: 0;
+}
+
+.navbar input {
+    padding: 8px;
+    width: 200px;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #2c3e50; /* Dark background */
+    color: #ecf0f1; /* Light text */
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0px -5px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.footer h3 {
+    color: #f39c12; /* Gold accent for header */
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+/* Footer Links */
+.footer a {
+    color: #ecf0f1;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.2s ease;
+    font-size: 16px;
+}
+
+.footer a:hover {
+    color: #f39c12; /* Gold accent on hover */
+    transform: scale(1.1); /* Slight scaling effect */
+}
+
+/* Social Media Links */
+.social-links {
+    margin: 20px 0;
+}
+
+.social-links a {
+    margin: 0 15px;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #f39c12;
+    transform: translateY(-5px); /* Hover effect with slight upward movement */
+}
+
+/* Footer Paragraphs */
+.footer p {
+    font-size: 14px;
+    margin: 8px 0;
+    color: #bdc3c7;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .footer-content {
+        padding: 20px;
+    }
+    .social-links a {
+        font-size: 16px;
+        margin: 0 10px;
+    }
+}
+
+h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 36px;
+    color: #2c3e50; /* Dark color for the title */
+    font-weight: bold;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+/* Adding a colorful underline with animation */
+h1::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #f39c12, #e74c3c, #9b59b6);
+    animation: underlineAnimation 2s infinite alternate;
+}
+
+/* Underline animation */
+@keyframes underlineAnimation {
+    0% {
+        transform: scaleX(0);
+        transform-origin: bottom right;
+    }
+    100% {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+}
+
+/* Add a subtle shadow effect to the text */
+h1 {
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+/* Adjusting the emoji size */
+h1 span {
+    font-size: 50px;
+    margin-right: 10px; /* Space between emoji and text */
+}
